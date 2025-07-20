@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Play, X } from 'lucide-react';
 import { VideoItem } from '../types';
+import superpositionThumbnail from '../images/superposition.jpg';
+
 
 const Portfolio: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
@@ -9,7 +11,7 @@ const Portfolio: React.FC = () => {
     {
       id: 1,
       title: "СУПЕРПОЗИЦИЯ",
-      thumbnail: "/images/superposition.jpg",
+      thumbnail: superpositionThumbnail,
       videoUrl: "https://www.youtube.com/watch?v=BZs-rdA8VZw",
       category: "Серия обучающих роликов"
     },
