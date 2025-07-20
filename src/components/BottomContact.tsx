@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import { ContactForm as ContactFormType } from '../types';
+import toast from 'react-hot-toast';
 
 const BottomContact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormType>({
@@ -49,7 +50,7 @@ const BottomContact: React.FC = () => {
 
       if (!response.ok) throw new Error('Ошибка при отправке в Telegram');
 
-      alert('✅ Заявка отправлена! Мы скоро с вами свяжемся.');
+      toast.success('Заявка отправлена! Мы скоро с вами свяжемся.');
 
       // Очистка формы
       setFormData({
@@ -60,7 +61,7 @@ const BottomContact: React.FC = () => {
       });
     } catch (error) {
       console.error(error);
-      alert('❌ Ошибка при отправке. Проверьте подключение или Telegram токен.');
+      toast.error('Ошибка при отправке. Попробуйте позже.');
     }
 
     setIsSubmitting(false);
