@@ -8,9 +8,9 @@ const Portfolio: React.FC = () => {
   const portfolioItems: VideoItem[] = [
     {
       id: 1,
-      title: "Brand Video Production",
+      title: "СУПЕРПОЗИЦИЯ",
       thumbnail: "https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop",
-      videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-businessman-working-on-laptop-in-office-4613-large.mp4",
+      videoUrl: "https://www.youtube.com/watch?v=BZs-rdA8VZw",
       category: "Corporate"
     },
     {
