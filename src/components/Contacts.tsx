@@ -31,7 +31,7 @@ const Contacts: React.FC = () => {
               <div>
                 <p className="text-red-200 text-sm">Phone</p>
                 <a href="tel:+77780017696" className="text-white text-xl font-semibold hover:text-red-300 transition-colors duration-300">
-                  +7 778 001 7696
+                  +7 776 006 9859
                 </a>
               </div>
             </div>
@@ -43,7 +43,7 @@ const Contacts: React.FC = () => {
               <div>
                 <p className="text-red-200 text-sm">Email</p>
                 <a href="mailto:teammotionplus@gmail.com" className="text-white text-xl font-semibold hover:text-red-300 transition-colors duration-300">
-                  teammotionplus@gmail.com
+                  kurkov.lil.ink@gmail.com
                 </a>
               </div>
             </div>
