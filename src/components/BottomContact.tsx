@@ -19,7 +19,7 @@ const BottomContact: React.FC = () => {
   };
 
   const BOT_TOKEN = '8037079570:AAFTtiS4LPHUvwiTx2uXLEWTsSYOh-XLR-U'; // вставь сюда токен от BotFather
-  const CHAT_ID = 'motionplusmax_bot'; // вставь сюда chat_id
+  const CHAT_ID = '535944534'; // вставь сюда chat_id
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
