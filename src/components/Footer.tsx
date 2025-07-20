@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
                 <span className="text-white text-xs font-bold">V</span>
               </a>
               <a
-                href="https://t.me/motionplus"
+                href="https://t.me/kurkovmax"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-300"
