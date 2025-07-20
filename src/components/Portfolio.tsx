@@ -9,7 +9,7 @@ const Portfolio: React.FC = () => {
     {
       id: 1,
       title: "СУПЕРПОЗИЦИЯ",
-      thumbnail: "https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop",
+      thumbnail: "/images/superposition.jpg",
       videoUrl: "https://www.youtube.com/watch?v=BZs-rdA8VZw",
       category: "Серия обучающих роликов"
     },
