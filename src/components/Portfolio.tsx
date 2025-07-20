@@ -11,7 +11,7 @@ const Portfolio: React.FC = () => {
       title: "СУПЕРПОЗИЦИЯ",
       thumbnail: "https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop",
       videoUrl: "https://www.youtube.com/watch?v=BZs-rdA8VZw",
-      category: "Corporate"
+      category: "Серия обучающих роликов"
     },
     {
       id: 2,
