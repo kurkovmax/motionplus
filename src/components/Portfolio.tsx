@@ -124,29 +124,29 @@ const Portfolio: React.FC = () => {
           ))}
         </div>
 
-        {/* Video Modal */}
-        {selectedVideo && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm">
-            <div className="relative max-w-4xl w-full mx-4">
-              <button
-                onClick={closeVideo}
-                className="absolute -top-12 right-0 text-white hover:text-red-500 transition-colors duration-300"
-              >
-                <X size={32} />
-              </button>
-              <div className="aspect-video">
-                <video
-                  controls
-                  autoPlay
-                  className="w-full h-full rounded-lg"
-                >
-                  <source src={selectedVideo.videoUrl} type="video/mp4" />
-                </video>
-              </div>
-              <h3 className="text-white text-xl font-semibold mt-4">{selectedVideo.title}</h3>
-            </div>
-          </div>
-        )}
+       {/* Video Modal */}
+{selectedVideo && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm">
+    <div className="relative max-w-4xl w-full mx-4">
+      <button
+        onClick={closeVideo}
+        className="absolute -top-12 right-0 text-white hover:text-red-500 transition-colors duration-300"
+      >
+        <X size={32} />
+      </button>
+      <div className="aspect-video">
+        <iframe
+          className="w-full h-full rounded-lg"
+          src={selectedVideo.videoUrl.replace("watch?v=", "embed/")}
+          title={selectedVideo.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+      <h3 className="text-white text-xl font-semibold mt-4">{selectedVideo.title}</h3>
+    </div>
+  </div>
+)}
       </div>
     </section>
   );
