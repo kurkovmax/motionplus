@@ -1,6 +1,6 @@
 import React from 'react';
 import { smoothScrollTo } from '../utils/smoothScroll';
-import logo from '/images/favicon.png'; // путь к лого
+import logo from '/images/logo2.png'; // путь к лого
 
 const Footer: React.FC = () => {
   const handleNavClick = (id: string) => {

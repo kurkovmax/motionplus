@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { smoothScrollTo } from '../utils/smoothScroll';
-import logo from '/images/favicon.png'; // путь к логотипу
+import logo from '/images/logo2.png'; // путь к логотипу
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
