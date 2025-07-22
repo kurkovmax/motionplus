@@ -6,12 +6,12 @@ import { ContactForm as ContactFormType } from '../types';
 const BottomContact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormType>({
     name: '',
-    phone: '',
+    phone: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const BOT_TOKEN = '8037079570:AAFTtiS4LPHUvwiTx2uXLEWTsSYOh-XLR-U';
-  const CHAT_ID = '535944534';
+  const CHAT_ID = '1267889361';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
