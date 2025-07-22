@@ -48,13 +48,15 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <button
-            onClick={() => handleNavClick('contacts')}
-            className="hidden md:block bg-red-600 text-white px-6 py-2 rounded-sm hover:bg-red-700 transition-all duration-300 font-semibold"
-          >
-            Оставить заявку
-          </button>
+          {/* CTA Download Button */}
+          <a
+  href="/images/presentation.pdf"
+  download
+  className="hidden md:block bg-red-600 text-white px-6 py-2 rounded-sm hover:bg-red-700 transition-all duration-300 font-semibold"
+>
+  Скачать презентацию
+</a>
+
 
           {/* Mobile Menu Button */}
           <button
@@ -78,12 +80,13 @@ const Navbar: React.FC = () => {
                   {item.label}
                 </button>
               ))}
-              <button
-                onClick={() => handleNavClick('contacts')}
+              <a
+                href="/images/presentation.pdf"
+                download
                 className="block w-full text-left px-3 py-2 bg-red-600 text-white hover:bg-red-700 transition-colors duration-300 rounded-sm mt-4 font-semibold"
               >
-                Оставить заявку
-              </button>
+                Скачать презентацию
+              </a>
             </div>
           </div>
         )}
