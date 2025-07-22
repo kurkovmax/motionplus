@@ -1,25 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { smoothScrollTo } from '../utils/smoothScroll';
 
 const Navbar: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navItems = [
     { label: 'Главная', id: 'hero' },
-    { label: 'Наши работы', id: 'portfolio' },
+    { label: 'Проекты', id: 'portfolio' },
     { label: 'Услуги', id: 'services' },
-    { label: 'Контакты', id: 'contacts' }
+    { label: 'Контакты', id: 'contacts' },
   ];
 
   const handleNavClick = (id: string) => {
@@ -28,18 +18,13 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/90 backdrop-blur-sm' : 'bg-transparent'
-    }`}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <button
-            onClick={() => handleNavClick('hero')}
-            className="text-2xl font-bold text-white hover:text-red-500 transition-colors duration-300"
-          >
+          <span className="text-2xl font-bold text-white">
             Motion<span className="text-red-500">+</span>
-          </button>
+          </span>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -47,7 +32,7 @@ const Navbar: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className="text-white hover:text-red-500 transition-colors duration-300 font-medium"
+                className="text-white hover:text-red-500 transition-colors duration-300 font-semibold"
               >
                 {item.label}
               </button>
@@ -57,7 +42,7 @@ const Navbar: React.FC = () => {
           {/* CTA Button */}
           <button
             onClick={() => handleNavClick('contacts')}
-            className="hidden md:block bg-red-600 text-white px-6 py-2 rounded-sm hover:bg-red-700 transition-all duration-300 font-medium"
+            className="hidden md:block bg-red-600 text-white px-6 py-2 rounded-sm hover:bg-red-700 transition-all duration-300 font-semibold"
           >
             Оставить заявку
           </button>
@@ -79,14 +64,14 @@ const Navbar: React.FC = () => {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="block w-full text-left px-3 py-2 text-white hover:text-red-500 transition-colors duration-300"
+                  className="block w-full text-left px-3 py-2 text-white hover:text-red-500 transition-colors duration-300 font-semibold"
                 >
                   {item.label}
                 </button>
               ))}
               <button
                 onClick={() => handleNavClick('contacts')}
-                className="block w-full text-left px-3 py-2 bg-red-600 text-white hover:bg-red-700 transition-colors duration-300 rounded-sm mt-4"
+                className="block w-full text-left px-3 py-2 bg-red-600 text-white hover:bg-red-700 transition-colors duration-300 rounded-sm mt-4 font-semibold"
               >
                 Оставить заявку
               </button>

@@ -7,7 +7,7 @@ const RunningLine: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-900 overflow-hidden">
+    <section className="py-12 bg-black overflow-hidden">
       <div className="text-center mb-8">
         <p className="text-red-500 text-sm font-medium uppercase tracking-wider mb-2">Нас выбирают</p>
         <h3 className="text-2xl md:text-3xl font-bold text-white">Крупные компании</h3>

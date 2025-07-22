@@ -1,40 +1,33 @@
 import React, { useState } from 'react';
-import { Send } from 'lucide-react';
-import { ContactForm as ContactFormType } from '../types';
+import { Send, Phone, MessageSquare, Mail, Instagram } from 'lucide-react';
 import toast from 'react-hot-toast';
+import { ContactForm as ContactFormType } from '../types';
 
 const BottomContact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormType>({
     name: '',
-    phone: '',
-    email: '',
-    comment: ''
+    phone: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const BOT_TOKEN = '8037079570:AAFTtiS4LPHUvwiTx2uXLEWTsSYOh-XLR-U';
+  const CHAT_ID = '535944534';
 
-  const BOT_TOKEN = '8037079570:AAFTtiS4LPHUvwiTx2uXLEWTsSYOh-XLR-U'; // вставь сюда токен от BotFather
-  const CHAT_ID = '535944534'; // вставь сюда chat_id
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const { name, phone, email, comment } = formData;
+    const { name, phone } = formData;
 
     const message = `
-📩 <b>Новая заявка с сайта Motion+</b>
+📬 <b>Новая заявка с сайта Motion+</b>
 
 👤 <b>Имя:</b> ${name}
 📞 <b>Телефон:</b> ${phone}
-📧 <b>Email:</b> ${email || '-'}
-📝 <b>Комментарий:</b> ${comment || '-'}
     `;
 
     try {
@@ -50,15 +43,8 @@ const BottomContact: React.FC = () => {
 
       if (!response.ok) throw new Error('Ошибка при отправке в Telegram');
 
-      toast.success('Заявка отправлена! Мы скоро с вами свяжемся.');
-
-      // Очистка формы
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        comment: ''
-      });
+      toast.success('Поздравляем, ваша заявка оставлена');
+      setFormData({ name: '', phone: '' });
     } catch (error) {
       console.error(error);
       toast.error('Ошибка при отправке. Попробуйте позже.');
@@ -68,47 +54,24 @@ const BottomContact: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-black relative overflow-hidden">
+    <section className="py-20 bg-black relative overflow-hidden" id="contacts">
       <div className="absolute inset-0">
         <img
           src="https://images.pexels.com/photos/3062623/pexels-photo-3062623.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Professional video equipment"
+          alt="Background"
           className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/70" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Left Content - Form */}
           <div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-              Введите свои<br />
-              контактные данные,<br />
-              и мы перезвоним
+              Введите свои<br />контактные данные,<br />и мы перезвоним
             </h2>
 
-            <div className="flex items-center space-x-4 mb-8">
-              <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-700">
-                <img
-                  src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop&crop=face"
-                  alt="Курков Макс"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <p className="text-white font-semibold">Курков Макс</p>
-                <p className="text-gray-400 text-sm">Коммерческий продюсер</p>
-              </div>
-            </div>
-
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Наш менеджер просчитает<br />
-              детали и свяжется с вами<br />
-              в ближайшее время
-            </p>
-          </div>
-
-          <div className="bg-black/50 backdrop-blur-sm rounded-lg p-8 border border-gray-800">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -123,7 +86,6 @@ const BottomContact: React.FC = () => {
                     className="w-full px-4 py-3 bg-transparent border border-gray-600 rounded-sm text-white placeholder-gray-500 focus:border-red-500 focus:outline-none transition-colors duration-300"
                   />
                 </div>
-
                 <div>
                   <label className="block text-gray-400 text-sm mb-2">Введите телефон</label>
                   <input
@@ -136,30 +98,6 @@ const BottomContact: React.FC = () => {
                     className="w-full px-4 py-3 bg-transparent border border-gray-600 rounded-sm text-white placeholder-gray-500 focus:border-red-500 focus:outline-none transition-colors duration-300"
                   />
                 </div>
-              </div>
-
-              <div>
-                <label className="block text-gray-400 text-sm mb-2">Введите email (необязательно)</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-transparent border border-gray-600 rounded-sm text-white placeholder-gray-500 focus:border-red-500 focus:outline-none transition-colors duration-300"
-                />
-              </div>
-
-              <div>
-                <label className="block text-gray-400 text-sm mb-2">Комментарий (необязательно)</label>
-                <input
-                  type="text"
-                  name="comment"
-                  placeholder="Комментарий"
-                  value={formData.comment}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-transparent border border-gray-600 rounded-sm text-white placeholder-gray-500 focus:border-red-500 focus:outline-none transition-colors duration-300"
-                />
               </div>
 
               <button
@@ -178,12 +116,44 @@ const BottomContact: React.FC = () => {
               </button>
 
               <p className="text-gray-500 text-xs leading-relaxed">
-                Нажимая на кнопку «Отправить», вы подтверждаете свое согласие на обработку персональных данных и соглашаетесь с{' '}
-                <a href="#" className="text-blue-400 hover:text-blue-300 transition-colors duration-300">
-                  политикой конфиденциальности
-                </a>
+                * Нажимая на кнопку «Отправить», вы подтверждаете свое согласие на обработку персональных данных
               </p>
             </form>
+          </div>
+
+          {/* Right Content - Contact Info */}
+          <div className="space-y-8 text-white">
+            <div className="space-y-6">
+              <div className="flex items-center space-x-3">
+                <Phone size={20} className="text-gray-400" />
+                <a href="tel:+77780017696" className="text-white text-lg hover:text-red-500 transition-colors duration-300">
+                  +7 778 001 7696
+                </a>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <MessageSquare size={20} className="text-gray-400" />
+                <span className="text-white text-lg">@kurkovmax</span>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <Mail size={20} className="text-gray-400" />
+                <a href="mailto:teammotionplus@gmail.com" className="text-white text-lg hover:text-red-500 transition-colors duration-300">
+                  teammotionplus@gmail.com
+                </a>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <Instagram size={20} className="text-gray-400" />
+                <span className="text-white text-lg">@motionplusprod</span>
+              </div>
+            </div>
+
+            <div className="pt-8 border-t border-gray-800">
+              <p className="text-white text-lg leading-relaxed">
+                <strong className="text-white">Motion+</strong> — продакшн полного цикла: от соцсетей до крупных событий. Видео, которое работает на ваш бренд.
+              </p>
+            </div>
           </div>
         </div>
       </div>

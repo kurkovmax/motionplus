@@ -16,9 +16,7 @@ function App() {
       <Hero />
       <Portfolio />
       <RunningLine />
-      <Workflow />
       <Services />
-      <Contacts />
       <BottomContact />
       <Footer />
     </div>

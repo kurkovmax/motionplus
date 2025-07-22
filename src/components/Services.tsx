@@ -7,36 +7,35 @@ const Services: React.FC = () => {
     {
       id: 1,
       title: "Съемка + монтаж",
-      description: "Видеоотчеты, рекламные ролики, интервью, подкасты, образовательный контент",
+      description: "",
       features: [
-        "Профессиональное видеопроизводство",
-        "Многокамерные установки",
-        "Расширенный постпродакшн",
-        "Цветокоррекция и звуковой дизайн"
+        "Видеоотчёты событий",
+        "Промо ролики",
+        "Интервью",
+        "Подкасты",
+        "Образовательный контент"
       ],
       image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
     },
     {
       id: 2,
-      title: "2D/3D графика",
-      description: "Анимация, визуальные эффекты, инфографика, компьютерная графика и 3D",
+      title: "2d/3d графика",
+      description: "",
       features: [
-        "Дизайн анимационной графики",
-        "Дизайн анимационной графики",
-        "3D-моделирование и анимация",
-        "Композитинг визуальных эффектов"
+        "2D-анимация (логотипы, текст, инфографика)",
+        "VFX и CGI (трендовые Reels, переходы, инфостиль)",
+        "3D-анимация"
       ],
       image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
     },
     {
       id: 3,
-      title: "Интерактивная инфографика",
-      description: "Контент на месяц, прозрачная цена, экономия времени и бюджета",
+      title: "Контент-пакеты",
+      description: "",
       features: [
-        "Ежемесячное планирование контента",
-        "Скидки при массовом производстве",
-        "Последовательные сообщения бренда",
-        "Гибкие графики доставки"
+        "Прозрачная цена и чёткий объём",
+        "Контент на месяц вперёд",
+        "Упаковка под Instagram, TikTok, YouTube"
       ],
       image: "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
     }
@@ -44,68 +43,75 @@ const Services: React.FC = () => {
 
   const getIcon = (index: number) => {
     switch (index) {
-      case 0: return <Camera size={48} className="text-red-500" />;
-      case 1: return <Layers size={48} className="text-red-500" />;
-      case 2: return <Package size={48} className="text-red-500" />;
-      default: return <Camera size={48} className="text-red-500" />;
+      case 0: return <Camera size={48} className="text-white" />;
+      case 1: return <Layers size={48} className="text-white" />;
+      case 2: return <Package size={48} className="text-white" />;
+      default: return <Camera size={48} className="text-white" />;
     }
   };
 
   return (
-    <section id="services" className="py-20 bg-gray-900">
+    <section id="services" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Что мы <span className="text-red-500">делаем?</span>
+          <p className="text-red-500 text-lg font-medium mb-4">Что мы делаем?</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            Наши творческие направления
           </h2>
-          <h3 className="text-2xl md:text-3xl text-gray-300 mb-8">Our creative directions</h3>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Мы — компания, предоставляющая полный спектр услуг по видеопроизводству, которая превращает ваши идеи в захватывающие визуальные истории.
-Наша команда сочетает технические знания и творческие инновации, чтобы создавать контент, который не только выглядит
-исключительно, но и приносит реальные бизнес-результаты. От концепции до завершения мы занимаемся каждым этапом
-производства, уделяя особое внимание деталям.
-          </p>
+          <div className="max-w-4xl mx-auto space-y-4">
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Гибкость под задачи бизнеса: от личных брендов до мероприятий.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              <span className="text-white font-semibold">Результат</span> — премиальная визуализация, которая выделяет ваш контент на фоне конкурентов.
+            </p>
+          </div>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div
               key={service.id}
-              className="group bg-black rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
+              className="group bg-gray-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
             >
-              {/* Image */}
+              {/* Image with Icon Overlay */}
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
+                <div className="absolute inset-0 bg-black/60"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
                   {getIcon(index)}
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-500 transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   {service.title}
                 </h3>
-                <p className="text-gray-400 mb-4 leading-relaxed">
-                  {service.description}
-                </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-gray-500 text-sm flex items-center">
-                      <span className="w-1.5 h-1.5 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
-                      {feature}
+                    <li key={featureIndex} className="text-gray-300 flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">-</span>
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom Message */}
+        <div className="text-center">
+          <p className="text-gray-300 text-lg max-w-4xl mx-auto leading-relaxed flex items-center justify-center">
+            <span className="text-red-500 mr-2">🔥</span>
+            Мы не просто снимаем — мы создаём контент, который цепляет, вовлекает и выделяется!
+          </p>
         </div>
       </div>
     </section>
