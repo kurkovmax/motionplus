@@ -16,15 +16,15 @@ const Portfolio: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
 
   const portfolioItems: VideoItem[] = [
-    { id: 1, title: "Суперпозиция", thumbnail: superpositionThumbnail, videoUrl: "https://youtu.be/zGipJrZiziQ", category: "Обучающее видео" },
+    { id: 1, title: "Суперпозиция", thumbnail: superpositionThumbnail, videoUrl: "https://youtu.be/watch?v=zGipJrZiziQ", category: "Обучающее видео" },
     { id: 2, title: "Багги тур", thumbnail: baggitourThumbnail, videoUrl: "https://www.youtube.com/watch?v=xqNvbsbMkD0", category: "Рекламный ролик" },
-    { id: 3, title: "КайдзенСлет", thumbnail: kaizen, videoUrl: "https://youtu.be/sYulR003hgY", category: "Рекламный ролик" },
-    { id: 4, title: "КайдзенКлуб", thumbnail: kaizenclubThumbnail, videoUrl: "https://youtu.be/w1YjO3Omy1g", category: "Видеоотчет" },
-    { id: 5, title: "Роман", thumbnail: romaThumbnail, videoUrl: "https://youtu.be/8yyQ2rcXHdM", category: "Имиджевый ролик" },
-    { id: 6, title: "Беседа", thumbnail: besedaThumbnail, videoUrl: "https://youtu.be/71nZBcJgxw8", category: "Интервью" },
-    { id: 7, title: "Dostyk Plaza", thumbnail: dostykThumbnail, videoUrl: "https://youtu.be/xPnAICW3ZQs", category: "Промо" },
-    { id: 8, title: "Димаш Arnau Tour", thumbnail: dimashThumbnail, videoUrl: "https://youtu.be/AxnTNd1__UU", category: "Видеоотчет" },
-    { id: 9, title: "ДНК Продаж", thumbnail: dnkThumbnail, videoUrl: "https://youtu.be/RaSJdZOrWic", category: "Событийный ролик" }
+    { id: 3, title: "КайдзенСлет", thumbnail: kaizen, videoUrl: "https://youtube.com/watch?v=sYulR003hgY", category: "Рекламный ролик" },
+    { id: 4, title: "КайдзенКлуб", thumbnail: kaizenclubThumbnail, videoUrl: "https://youtube.com/watch?v=w1YjO3Omy1g", category: "Видеоотчет" },
+    { id: 5, title: "Роман", thumbnail: romaThumbnail, videoUrl: "https://youtube.com/watch?v=8yyQ2rcXHdM", category: "Имиджевый ролик" },
+    { id: 6, title: "Беседа", thumbnail: besedaThumbnail, videoUrl: "https://youtube.com/watch?v=71nZBcJgxw8", category: "Интервью" },
+    { id: 7, title: "Dostyk Plaza", thumbnail: dostykThumbnail, videoUrl: "https://youtube.com/watch?v=xPnAICW3ZQs", category: "Промо" },
+    { id: 8, title: "Димаш Arnau Tour", thumbnail: dimashThumbnail, videoUrl: "https://youtube.com/watch?v=AxnTNd1__UU", category: "Видеоотчет" },
+    { id: 9, title: "ДНК Продаж", thumbnail: dnkThumbnail, videoUrl: "https://youtube.com/watch?v=RaSJdZOrWic", category: "Событийный ролик" }
   ];
 
   const openVideo = (video: VideoItem) => setSelectedVideo(video);
