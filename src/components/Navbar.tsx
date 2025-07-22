@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* 🔻 Логотип */}
           <button onClick={() => handleNavClick('hero')} className="cursor-pointer hover:opacity-80 transition">
-            <img src={logo} alt="Motion+" className="h-13 w-12" />
+            <img src={logo} alt="Motion+" className="h-25 w-20" />
           </button>
 
           {/* Навигация (десктоп) */}
