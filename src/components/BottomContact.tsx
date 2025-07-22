@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Send, Phone, MessageSquare, Mail, Instagram } from 'lucide-react';
+import { Send } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { ContactForm as ContactFormType } from '../types';
-import telegram from "../images/telegram.png"
+
 const BottomContact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormType>({
     name: '',
@@ -24,7 +24,7 @@ const BottomContact: React.FC = () => {
     const { name, phone } = formData;
 
     const message = `
-📬 <b>Новая заявка с сайта Motion+</b>
+📩 <b>Новая заявка с сайта Motion+</b>
 
 👤 <b>Имя:</b> ${name}
 📞 <b>Телефон:</b> ${phone}
@@ -66,7 +66,7 @@ const BottomContact: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left Content - Form */}
+          {/* Левая часть — форма */}
           <div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
               Введите свои<br />контактные данные,<br />и мы перезвоним
@@ -121,43 +121,16 @@ const BottomContact: React.FC = () => {
             </form>
           </div>
 
-          {/* Right Content - Contact Info */}
-          <div className="space-y-8 text-white">
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <Phone size={20} className="text-gray-400" />
-                <a href="tel:+77780017696" className="text-white text-lg hover:text-red-500 transition-colors duration-300">
-                  +7 778 001 7696
-                </a>
-              </div>
-<div className="flex items-center space-x-3">
-  <img
-    src={TelegramIcon}
-    alt="Telegram"
-    className="w-5 h-5 object-contain" // фиксирует размер и выравнивает
-  />
-  <span className="text-white text-lg">@kurkovmax</span>
-</div>
-
-
-              <div className="flex items-center space-x-3">
-                <Mail size={20} className="text-gray-400" />
-                <a href="mailto:teammotionplus@gmail.com" className="text-white text-lg hover:text-red-500 transition-colors duration-300">
-                  teammotionplus@gmail.com
-                </a>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <Instagram size={20} className="text-gray-400" />
-                <span className="text-white text-lg">@motionplusprod</span>
-              </div>
-            </div>
-
-            <div className="pt-8 border-t border-gray-800">
-              <p className="text-white text-lg leading-relaxed">
-                <strong className="text-white">Motion+</strong> — продакшн полного цикла: от соцсетей до крупных событий. Видео, которое работает на ваш бренд.
-              </p>
-            </div>
+          {/* Правая часть — информация */}
+          <div className="text-white space-y-4">
+            <p className="text-lg">+7 778 001 7696</p>
+            <p className="text-lg">@kurkovmax</p>
+            <p className="text-lg">teammotionplus@gmail.com</p>
+            <p className="text-lg">@motionplusprod</p>
+            <p className="text-sm text-gray-300 pt-4">
+              <strong className="text-white">Motion+</strong> — продакшн полного цикла: от соцсетей до крупных событий.<br />
+              Видео, которое работает на ваш бренд.
+            </p>
           </div>
         </div>
       </div>
