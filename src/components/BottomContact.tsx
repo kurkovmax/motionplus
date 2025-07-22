@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Send } from 'lucide-react';
+import { Send, Phone, Mail, Instagram } from 'lucide-react';
+import { FaTelegramPlane } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import { ContactForm as ContactFormType } from '../types';
 
@@ -121,17 +122,50 @@ const BottomContact: React.FC = () => {
             </form>
           </div>
 
-          {/* Правая часть — информация */}
+          {/* Правая часть — информация с иконками */}
           <div className="text-white space-y-4">
-            <p className="text-lg">+7 778 001 7696</p>
-            <p className="text-lg">@kurkovmax</p>
-            <p className="text-lg">teammotionplus@gmail.com</p>
-            <p className="text-lg">@motionplusprod</p>
-            <p className="text-sm text-gray-300 pt-4">
-              <strong className="text-white">Motion+</strong> — продакшн полного цикла: от соцсетей до крупных событий.<br />
-              Видео, которое работает на ваш бренд.
-            </p>
-          </div>
+  <a
+    href="tel:+77780017696"
+    className="flex items-center space-x-3 hover:text-red-500 transition-colors duration-300"
+  >
+    <Phone size={18} className="text-red-500" />
+    <p className="text-lg">+7 778 001 7696</p>
+  </a>
+
+  <a
+    href="https://t.me/kurkovmax"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center space-x-3 hover:text-red-500 transition-colors duration-300"
+  >
+    <FaTelegramPlane size={18} className="text-red-500" />
+    <p className="text-lg">@kurkovmax</p>
+  </a>
+
+  <a
+    href="mailto:teammotionplus@gmail.com"
+    className="flex items-center space-x-3 hover:text-red-500 transition-colors duration-300"
+  >
+    <Mail size={18} className="text-red-500" />
+    <p className="text-lg">teammotionplus@gmail.com</p>
+  </a>
+
+  <a
+    href="https://www.instagram.com/motionplusprod"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center space-x-3 hover:text-red-500 transition-colors duration-300"
+  >
+    <Instagram size={18} className="text-red-500" />
+    <p className="text-lg">@motionplusprod</p>
+  </a>
+
+  <p className="text-sm text-gray-300 pt-4">
+    <strong className="text-white">Motion+</strong> — продакшн полного цикла: от соцсетей до крупных событий.<br />
+    Видео, которое работает на ваш бренд.
+  </p>
+</div>
+
         </div>
       </div>
     </section>
