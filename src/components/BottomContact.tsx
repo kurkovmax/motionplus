@@ -70,7 +70,7 @@ const BottomContact: React.FC = () => {
           {/* Левая часть — форма */}
           <div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-              Введите свои<br />контактные данные,<br />и мы перезвоним
+              Оставьте свои<br /> данные,<br />и мы перезвоним
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
