@@ -16,7 +16,7 @@ const Portfolio: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
 
   const portfolioItems: VideoItem[] = [
-    { id: 1, title: "Суперпозиция", thumbnail: superpositionThumbnail, videoUrl: "https://youtu.be/zGipJrZiziQ", category: "Обучающее видео" },
+    { id: 1, title: "Суперпозиция", thumbnail: superpositionThumbnail, videoUrl: "https://www.youtube.com/watch?v=BZs-rdA8VZw", category: "Обучающее видео" },
     { id: 2, title: "Багги тур", thumbnail: baggitourThumbnail, videoUrl: "https://www.youtube.com/watch?v=xqNvbsbMkD0", category: "Рекламный ролик" },
     { id: 3, title: "КайдзенСлет", thumbnail: kaizen, videoUrl: "https://www.youtube.com/watch?v=sYulR003hgY", category: "Рекламный ролик" },
     { id: 4, title: "КайдзенКлуб", thumbnail: kaizenclubThumbnail, videoUrl: "https://www.youtube.com/watch?v=w1YjO3Omy1g", category: "Видеоотчет" },
