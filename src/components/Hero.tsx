@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
     {/* Заголовок */}
     <div className="absolute top-[28%] max-w-[90%] sm:max-w-[600px]">
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-        Мы креативное <br /> агентство <br /> медиапроизводства
+        Мы креативное <br /> агентство <br /> медиаконтента
       </h1>
     </div>
 
