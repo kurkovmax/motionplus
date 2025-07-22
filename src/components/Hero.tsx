@@ -31,12 +31,14 @@ const Hero: React.FC = () => {
     </div>
 
     {/* Подзаголовок */}
-    <div className="absolute bottom-[18%] right-0 max-w-xs text-right">
-      <p className="text-base sm:text-lg md:text-xl font-normal">
-        Решаем ваши <br />
-        бизнес-задачи с помощью видео
-      </p>
-    </div>
+    {/* Подзаголовок */}
+<div className="absolute bottom-[12%] right-0 max-w-sm text-right">
+  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug">
+    Решаем ваши <br />
+    бизнес-задачи с помощью видео
+  </p>
+</div>
+
   </div>
 </section>
 
