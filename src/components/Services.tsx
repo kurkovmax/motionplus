@@ -4,19 +4,20 @@ const Services: React.FC = () => {
   return (
     <section id="services" className="relative py-20 bg-black overflow-hidden">
       {/* Фоновое видео */}
+        {/* 🎬 Фоновое видео */}
       <div className="absolute inset-0 z-0">
         <video
-          className="w-full h-full object-cover opacity-20"
           autoPlay
           muted
           loop
           playsInline
+          className="w-full h-full object-cover"
         >
           <source src="/assets/videos/bg_video.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает видео.
         </video>
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
-
       {/* Контент */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
