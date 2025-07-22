@@ -3,7 +3,7 @@ import companyLogos from '/images/company.png'; // путь к картинке 
 
 const RunningLine: React.FC = () => {
   return (
-    <section className="py-12 bg-black overflow-hidden">
+    <section className="py-2 bg-black overflow-hidden">
       <div className="relative w-full">
         <div className="flex animate-scrollFast">
           {/* Первая копия изображения */}

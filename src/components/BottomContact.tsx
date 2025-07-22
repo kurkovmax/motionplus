@@ -6,7 +6,7 @@ import { ContactForm as ContactFormType } from '../types';
 const BottomContact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormType>({
     name: '',
-    phone: ''
+    phone: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 

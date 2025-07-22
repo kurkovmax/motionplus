@@ -3,10 +3,10 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Portfolio from './components/Portfolio';
 import RunningLine from './components/RunningLine';
-import Workflow from './components/Workflow';
+//import Workflow from './components/Workflow';
 import Services from './components/Services';
 import BottomContact from './components/BottomContact';
-import Contacts from './components/Contacts';
+//import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 
 function App() {
