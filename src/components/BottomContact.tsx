@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Send, Phone, MessageSquare, Mail, Instagram } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { ContactForm as ContactFormType } from '../types';
-
+import telegram from "../images/telegram.png"
 const BottomContact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormType>({
     name: '',
@@ -130,11 +130,15 @@ const BottomContact: React.FC = () => {
                   +7 778 001 7696
                 </a>
               </div>
+<div className="flex items-center space-x-3">
+  <img
+    src={TelegramIcon}
+    alt="Telegram"
+    className="w-5 h-5 object-contain" // фиксирует размер и выравнивает
+  />
+  <span className="text-white text-lg">@kurkovmax</span>
+</div>
 
-              <div className="flex items-center space-x-3">
-                <MessageSquare size={20} className="text-gray-400" />
-                <span className="text-white text-lg">@kurkovmax</span>
-              </div>
 
               <div className="flex items-center space-x-3">
                 <Mail size={20} className="text-gray-400" />

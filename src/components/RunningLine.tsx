@@ -8,12 +8,8 @@ const RunningLine: React.FC = () => {
 
   return (
     <section className="py-12 bg-black overflow-hidden">
-      <div className="text-center mb-8">
-        
-      </div>
-      
       <div className="relative">
-        <div className="flex animate-scroll">
+        <div className="flex animate-scrollFast">
           {/* First set of companies */}
           <div className="flex items-center space-x-12 whitespace-nowrap">
             {companies.map((company, index) => (
@@ -25,7 +21,7 @@ const RunningLine: React.FC = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Duplicate set for seamless loop */}
           <div className="flex items-center space-x-12 whitespace-nowrap ml-12">
             {companies.map((company, index) => (
