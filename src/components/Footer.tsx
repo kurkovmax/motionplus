@@ -1,5 +1,6 @@
 import React from 'react';
 import { smoothScrollTo } from '../utils/smoothScroll';
+import logo from '../images/favicon.png'; // путь к лого
 
 const Footer: React.FC = () => {
   const handleNavClick = (id: string) => {
@@ -11,11 +12,8 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-4">
           {/* Logo */}
-          <button
-            onClick={() => handleNavClick('hero')}
-            className="text-2xl font-bold text-white hover:text-red-500 transition-colors duration-300"
-          >
-            Motion<span className="text-red-500">+</span>
+          <button onClick={() => handleNavClick('hero')} className="hover:opacity-80 transition">
+            <img src={logo} alt="Motion+" className="h-10 w-auto" />
           </button>
 
           {/* Copyright */}
