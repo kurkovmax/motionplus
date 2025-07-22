@@ -1,10 +1,12 @@
 import React from 'react';
+import ShootingEditing from '../images/shooting_editing.png';
+import ContentPackages from '../images/content_packages.png';
+import Graphics from '../images/graphics.png';
 
 const Services: React.FC = () => {
   return (
     <section id="services" className="relative py-20 bg-black overflow-hidden">
-      {/* Фоновое видео */}
-        {/* 🎬 Фоновое видео */}
+      {/* 🎬 Фоновое видео */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -18,8 +20,10 @@ const Services: React.FC = () => {
         </video>
         <div className="absolute inset-0 bg-black/70" />
       </div>
+
       {/* Контент */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Заголовок */}
         <div className="text-center mb-16">
           <p className="text-red-500 text-lg font-medium mb-4">Что мы делаем?</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
@@ -35,12 +39,29 @@ const Services: React.FC = () => {
           </div>
         </div>
 
-        {/* Сетка карточек */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {/* ... (оставь 3 блока карточек как есть) */}
-          {/* Вырезал ради компактности — они остаются без изменений */}
-        </div>
+        {/* Изображения в ряд без подсказок */}
+        <div className="mb-24 mt-8">
+  <div className="flex flex-col md:flex-row justify-center items-center gap-12">
+    <img
+      src={ShootingEditing}
+      alt="Съемка + монтаж"
+      className="h-[300px] w-auto rounded-xl shadow-xl"
+    />
+    <img
+      src={ContentPackages}
+      alt="Контент-пакеты"
+      className="h-[300px] w-auto rounded-xl shadow-xl"
+    />
+    <img
+      src={Graphics}
+      alt="Графика"
+      className="h-[300px] w-auto rounded-xl shadow-xl"
+    />
+  </div>
+</div>
 
+
+        {/* Финальный текст */}
         <div className="text-center">
           <p className="text-gray-300 text-lg max-w-4xl mx-auto leading-relaxed flex items-center justify-center">
             <span className="text-red-500 mr-2">🔥</span>
