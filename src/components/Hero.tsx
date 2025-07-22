@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
     {/* Подзаголовок */}
     {/* Подзаголовок */}
 <div className="absolute bottom-[12%] right-0 max-w-sm text-right">
-  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug">
+  <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
     Решаем ваши <br />
     бизнес-задачи с помощью видео
   </p>
