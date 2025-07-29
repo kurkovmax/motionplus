@@ -16,16 +16,71 @@ const Portfolio: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
 
   const portfolioItems: VideoItem[] = [
-    { id: 1, title: "Суперпозиция", thumbnail: superpositionThumbnail, videoUrl: "https://www.youtube.com/watch?v=BZs-rdA8VZw", category: "Обучающее видео" },
-    { id: 2, title: "Багги тур", thumbnail: baggitourThumbnail, videoUrl: "https://www.youtube.com/watch?v=xqNvbsbMkD0", category: "Рекламный ролик" },
-    { id: 3, title: "КайдзенСлет", thumbnail: kaizen, videoUrl: "https://www.youtube.com/watch?v=sYulR003hgY", category: "Рекламный ролик" },
-    { id: 4, title: "КайдзенКлуб", thumbnail: kaizenclubThumbnail, videoUrl: "https://www.youtube.com/watch?v=w1YjO3Omy1g", category: "Видеоотчет" },
-    { id: 5, title: "Роман", thumbnail: romaThumbnail, videoUrl: "https://www.youtube.com/watch?v=8yyQ2rcXHdM", category: "Имиджевый ролик" },
-    { id: 6, title: "Беседа", thumbnail: besedaThumbnail, videoUrl: "https://www.youtube.com/watch?v=71nZBcJgxw8", category: "Интервью" },
-    { id: 7, title: "Dostyk Plaza", thumbnail: dostykThumbnail, videoUrl: "https://www.youtube.com/watch?v=xPnAICW3ZQs", category: "Промо" },
-    { id: 8, title: "Димаш Arnau Tour", thumbnail: dimashThumbnail, videoUrl: "https://www.youtube.com/watch?v=AxnTNd1__UU", category: "Видеоотчет" },
-    { id: 9, title: "ДНК Продаж", thumbnail: dnkThumbnail, videoUrl: "https://www.youtube.com/watch?v=RaSJdZOrWic", category: "Событийный ролик" }
-  ];
+  {
+    id: 1,
+    title: "Суперпозиция. Маргулан Сейсембай",
+    thumbnail: superpositionThumbnail,
+    videoUrl: "https://www.youtube.com/watch?v=BZs-rdA8VZw",
+    category: "Серия обучающих видеороликов"
+  },
+  {
+    id: 2,
+    title: "Тайны Устюрта. Багги тур",
+    thumbnail: baggitourThumbnail,
+    videoUrl: "https://www.youtube.com/watch?v=xqNvbsbMkD0",
+    category: "Рекламный ролик"
+  },
+  {
+    id: 3,
+    title: "Слет Кайдзен клуба",
+    thumbnail: kaizen,
+    videoUrl: "https://www.youtube.com/watch?v=sYulR003hgY",
+    category: "Рекламный ролик"
+  },
+  {
+    id: 4,
+    title: "Гранд Открытие Клуба",
+    thumbnail: kaizenclubThumbnail,
+    videoUrl: "https://www.youtube.com/watch?v=w1YjO3Omy1g",
+    category: "Видеоотчет с мероприятия"
+  },
+  {
+    id: 5,
+    title: "Zhinkin Roman ShowReel",
+    thumbnail: romaThumbnail,
+    videoUrl: "https://www.youtube.com/watch?v=8yyQ2rcXHdM",
+    category: "Имиджевое видео"
+  },
+  {
+    id: 6,
+    title: "Беседы с Маргуланом",
+    thumbnail: besedaThumbnail,
+    videoUrl: "https://www.youtube.com/watch?v=71nZBcJgxw8",
+    category: "Подкаст"
+  },
+  {
+    id: 7,
+    title: "Dostyk Plaza. Restotaunt Gallery",
+    thumbnail: dostykThumbnail,
+    videoUrl: "https://www.youtube.com/watch?v=xPnAICW3ZQs",
+    category: "Промо ролик"
+  },
+  {
+    id: 8,
+    title: "Arnau Tour. Димаш Кудайберген",
+    thumbnail: dimashThumbnail,
+    videoUrl: "https://www.youtube.com/watch?v=AxnTNd1__UU",
+    category: "Видеоотчет с мероприятия"
+  },
+  {
+    id: 9,
+    title: "Форум ДНК Продаж",
+    thumbnail: dnkThumbnail,
+    videoUrl: "https://www.youtube.com/watch?v=RaSJdZOrWic",
+    category: "Видеоотчет с мероприятия"
+  }
+];
+
 
   const openVideo = (video: VideoItem) => setSelectedVideo(video);
   const closeVideo = () => setSelectedVideo(null);

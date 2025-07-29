@@ -56,14 +56,8 @@ const BottomContact: React.FC = () => {
 
   return (
     <section className="py-20 bg-black relative overflow-hidden" id="contacts">
-      <div className="absolute inset-0">
-        <img
-          src="https://images.pexels.com/photos/3062623/pexels-photo-3062623.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Background"
-          className="w-full h-full object-cover opacity-30"
-        />
-        <div className="absolute inset-0 bg-black/70" />
-      </div>
+      <div className="absolute inset-0 bg-[#090909]" />
+
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
